@@ -1,0 +1,13 @@
+{"localizations": [
+		{
+			"key": "report_measurement_title",
+			"text": {
+				"DE": "FibriCheck Messung Bericht",
+                "FR": "Rapport de mesure Fibricheck",
+                "NL": "FibriCheck Metingrapport",
+                "EN": "FibriCheck Measurement Report"
+			}
+		},
+
+	]
+}

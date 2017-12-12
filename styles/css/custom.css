@@ -1,0 +1,52 @@
+.header {
+  margin-top: 50px;
+}
+
+.title {
+  color: grey;
+}
+
+.pages {
+  position: absolute;
+  bottom: 0;
+}
+
+.center-div {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.footer {
+  position: absolute;
+  width: 72%;
+  bottom: 0;
+}
+
+hr{
+    padding: 0px;
+    margin: 0px;
+  }
+
+.small {
+  font-size: 12px;
+  line-height: 80%;
+}
+
+.yesno {
+  position: absolute;
+  right: 100px;
+}
+
+.red {
+  color: red;
+}
+
+.page_break {
+  page-break-after: always;
+}

@@ -1,0 +1,112 @@
+{
+  "name": "",
+  "description": "",
+  "schema" : {
+    "fields" : {
+      "name": { "type": "string" },
+      "version": { "type": "number" },
+      "software_safety_class": { "type": "string" },
+      "software_version_checklist": {
+          "type": "object",
+          "fields": {
+              "effects":
+                {
+                  "type": "array",
+                  "type_configuration" : {
+                      "type" : "object",
+                      "fields" : {
+                            "title": { "type": "string" },
+                            "has_effect": { "type": "boolean" }
+                      }
+                  }
+                },
+              "justification": { "type": "string" },
+              "signature": {
+                    "type": "object",
+                    "fields": {
+                        "date": { "type": "string" },
+                        "title": { "type": "string"},
+                        "base64_signature": { "type": "string"}
+                    }
+              }
+          }
+      },
+      "release_form": {
+        "type": "object",
+        "fields": {
+            "information_available":
+              {
+                "type": "array",
+                "type_configuration" : {
+                    "type": "object",
+                    "fields": {
+                        "title" : { "type": "string" },
+                        "available" : { "type": "boolean" }
+                    }
+                }
+              },
+            "justification": { "type" : "string" },
+            "git_information": {
+              "type": "object",
+              "fields": {
+                  "release_commit_number": { "type": "string" },
+                  "previous_version_number": { "type": "number" },
+                  "previous_master_commit": { "type": "number" }
+              }
+            },
+            "signature": {
+              "type": "object",
+              "fields": {
+                  "date": { "type": "string" },
+                  "title": { "type": "string" },
+                  "base64_signature": { "type": "string" }
+              }
+            }
+        }
+      },
+      "annexes": {
+        "type": "object",
+        "fields": {
+           "change_requests": {
+              "type": "object",
+              "fields": {
+                "items":
+                  {
+                    "type": "array",
+                    "type_configuration" : {
+                        "type" : "object",
+                        "fields" : {
+                              "key": { "type": "string" },
+                              "description": { "type": "string" },
+                              "status": { "type": "string"}
+                        }
+                    }
+                  }
+              }
+            },
+            "unit_tests": {
+              "type": "object",
+              "fields": {
+                "items":
+                  {
+                    "type": "array",
+                    "type_configuration" : {
+                        "type" : "object",
+                        "fields" : {
+                              "key": { "type": "string" },
+                              "description": { "type": "string" },
+                              "status": { "type": "string"}
+                        }
+                    }
+                  }
+              }
+            }
+        }
+      }
+    },
+    "type" : "object"
+  },
+  "fields": {
+    "body": ""
+  }
+}
