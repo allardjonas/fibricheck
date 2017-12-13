@@ -50,8 +50,8 @@
               "type": "object",
               "fields": {
                   "release_commit_number": { "type": "string" },
-                  "previous_version_number": { "type": "number" },
-                  "previous_master_commit": { "type": "number" }
+                  "previous_version_number": { "type": "string" },
+                  "previous_master_commit": { "type": "string" }
               }
             },
             "signature": {

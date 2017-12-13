@@ -5,7 +5,7 @@
 				 "version": "1.1.6",
 				 "software_safety_class": "B",
 				 "software_version_checklist": {
-				 	"effetcs": [
+				 	"effects": [
 				 		{"title": "", "has_effect": true}
 				 		],
 				 	"justification": "",
@@ -13,7 +13,7 @@
 				 },
 				 "release_form": {
 				 	"information_available": [
-
+							{"title": "", "available": false}
 				 		],
 				 	"justificatin": "",
 				 	"git_information": {"release_commit_number": "", "previous_version_number": 1.1, "previous_master_commit": 1},
