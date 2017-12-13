@@ -347,43 +347,6 @@
 
     </table>
   </div>
-<!--<table class="table">
-  <tr>
-    <th>Key</th>
-    <th>Description</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>FIBIOS-443</td>
-    <td>App begint te meten zonder vinger op de camera</td>
-    <td>Closed</td>
-  </tr>
-  <tr>
-    <td>FIBIOS-449</td>
-    <td>Log connected user with crashlytics</td>
-    <td>Closed</td>
-  </tr>
-  <tr>
-    <td>FIBIOS-450</td>
-    <td>Improve the finger detection algorithm</td>
-    <td>Closed</td>
-  </tr>
-  <tr>
-    <td>FIBIOS-451</td>
-    <td>Bug where you can't measure twice</td>
-    <td>Closed</td>
-  </tr>
-  <tr>
-    <td>FIBIOS-457</td>
-    <td>AlertView crashing. Statistics from Crashlytics</td>
-    <td>Closed</td>
-  </tr>
-  <tr>
-    <td>FIBIOS-461</td>
-    <td>Make Notification &amp; Location onboarding screens optional.</td>
-    <td>Closed</td>
-  </tr>
-</table>-->
 </div>
 
 </div>
@@ -432,19 +395,6 @@
 
     </table>
   </div>
-
-<!--<table class="table">
-  <tr>
-    <th>Key</th>
-    <th>Description</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>BeatListenerTest</td>
-    <td>Heartrate test</td>
-    <td>Passed</td>
-  </tr>
-</table>-->
 </div>
 
 </div>
@@ -460,15 +410,29 @@
   unit_tests = content.annexes.unit_tests.items;
 
   var table_effects = "";
+  var yes_no_effects = "";
   for (var i=0; i<effects.length; i++) {
-    table_effects += "<tr><td>" + effects[i].title +"</td><td>" + effects[i].has_effect + "</td></tr>";
+    if (effects[i].has_effect == true){
+      yes_no_effects = "<td><strong>Yes</strong></td><td><s>No</s></td>";
+    }
+    else{
+      yes_no_effects = "<td><s>Yes</s></td><td><strong>No</strong></td>";
+    }
+    table_effects += "<tr><td>" + effects[i].title + yes_no_effects + "</tr>";
   }
 
     document.getElementById("specifications").innerHTML = table_effects;
 
   var table_available_info = "";
+  var yes_no_available = "";
   for (var i=0; i<available_info.length; i++) {
-    table_available_info += "<tr><td>" + available_info[i].title +"</td><td>" + available_info[i].available + "</td></tr>";
+    if (available_info[i].available == true){
+      yes_no_available = "<td><strong>Yes</strong></td><td><s>No</s></td>";
+    }
+    else{
+      yes_no_available = "<td><s>Yes</s></td><td><strong>No</strong></td>";
+    }
+    table_available_info += "<tr><td>" + available_info[i].title +"</td>" + yes_no_available + "</tr>";
   }
 
     document.getElementById("available").innerHTML = table_available_info;
