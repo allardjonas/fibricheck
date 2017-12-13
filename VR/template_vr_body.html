@@ -424,7 +424,7 @@
   <br />
 
   <h5 class="text-center">SOFTWARE UNIT TEST RESULTS</h5>
-  <!--{{report_measurement_title}}--> vb voor localizations
+  <!--{{report_measurement_title}} vb voor localizations-->
   <br />
 
   <div>
@@ -453,19 +453,34 @@
 <script type="text/javascript">
 
   content = $tools.json($content);
-  effects = content.software_version_checklist.effects;
 
-  var txt = "";
-  for (var i=0; i<content.software_version_checklist.effects.length; i++) {
-    txt += "<tr><td>" + effects[i].title +"</td><td>" + effects[i].has_effect + "</td></tr>";
+  effects = content.software_version_checklist.effects;
+  available_info = content.release_form.information_available;
+  //change_requests = content.anexxes.change_requests.items;
+
+  var table_effects = "";
+  for (var i=0; i<effects.length; i++) {
+    table_effects += "<tr><td>" + effects[i].title +"</td><td>" + effects[i].has_effect + "</td></tr>";
   }
 
-    document.getElementById("specifications").innerHTML = txt;
+    document.getElementById("specifications").innerHTML = table_effects;
 
-  //document.getElementById("specifications").innerHTML = content.software_version_checklist.effects[0].title;
-  /*$(".version").html("Version: 5.0");
-  $("#name").html("FibriCheck iOS");
-  $("#version").html("1.1.4");*/
+  var table_available_info = "";
+  for (var i=0; i<available_info.length; i++) {
+    table_available_info += "<tr><td>" + available_info[i].title +"</td><td>" + available_info[i].available + "</td></tr>";
+  }
+
+    document.getElementById("available").innerHTML = table_available_info;
+
+  /*var table_change_requests = "";
+  for (var i=0; i<change_requests.length; i++) {
+    table_change_requests += "<tr><td>" + change_requests[i].key +"</td><td>" + change_requests[i].description + "</td><td>" + change_requests[i].status + "</td></tr>";
+  }
+
+    document.getElementById("change_requests").innerHTML = table_change_requests;*/
+
+
+
 </script>
 
 </html>

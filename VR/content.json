@@ -1,28 +1,50 @@
 {
 	"content":
-  {
-    "name": "GF160",
-				 "version": "1.1.6",
+	{
+    			 "name": "FibriCheck iOS",
+				 "version": "1.1.4",
 				 "software_safety_class": "B",
 				 "software_version_checklist": {
 				 	"effects": [
-				 		{"title": "", "has_effect": true}
+				 		{"title": "Application specifications", "has_effect": true},
+				 		{"title": "Labelling", "has_effect": false},
+				 		{"title": "Instructins for use", "has_effect": false},
+				 		{"title": "Risk Management Report", "has_effect": false},
+				 		{"title": "Does the changes affect the performance specification of the MD?", "has_effect": false},
+				 		{"title": "Does the changes affect materials of the MD?", "has_effect": false},
+				 		{"title": "Does the changes introduce new hazards which have not been previously addressed?", "has_effect": false},
+				 		{"title": "Does the changes affect the risks associated with existing hazards?", "has_effect": false},
+				 		{"title": "Does the changes alter the details on compliannce with the essential requirements given in the design / type approval dossier submitted to the Notified Body?", "has_effect": false},
+				 		{"title": "Does the changes alter the details on intended use given in the design / type approval dossier submitted to the Notified Body?", "has_effect": false},
+				 		{"title": "Does the changes mean that the device will have different end users or be used in a different manner?", "has_effect": false},
+				 		{"title": "Does the changes mean that the clinical data/performance evaluation data for the original device is not sufficient to confirm conformity of the changed device with the required characteristics and perfrmance?", "has_effect": false},
+				 		{"title": "Is the changes a direct result of actions taken related to concerns arising from incidents/recalls/complaints?", "has_effect": false}
 				 		],
-				 	"justification": "",
-				 	"signature": {"date": "", "title": "", "base64_signature": ""}
+				 	"justification": "This version includes small improvements and bug fixes. This version has an improved finger detection system.",
+				 	"signature": {"date": "26/06/2017", "title": "Quality Manager", "base64_signature": ""}
 				 },
 				 "release_form": {
 				 	"information_available": [
-							{"title": "", "available": false}
+							{"title": "An updated version of the user needs, requirements and technical specifications?", "available": false},
+							{"title": "An updated version of the prduct anomaly list (PAL)?", "available": false},
+							{"title": "An updated version of the product SOUP list?", "available": true},
+							{"title": "unit test results (if applicable)", "available": true},
+							{"title": "Software system & integratin test results", "available": true},
+							{"title": "Updated version of the Risk Management Report (if required)", "available": true}
 				 		],
-				 	"justificatin": "",
-				 	"git_information": {"release_commit_number": "", "previous_version_number": 1.1, "previous_master_commit": 1},
-				 	"signature": {"date": "", "title": "", "base64_signature": ""}
+				 	"justification": "Not required.",
+				 	"git_information": {"release_commit_number": "8716d01", "previous_version_number": "1.1.3", "previous_master_commit": "aa40cb"},
+				 	"signature": {"date": "26/06/2017", "title": "Project Manager", "base64_signature": ""}
 				 },
 				 "annexes": {
 				 	"change_requests": {
 				 		"items": [
-				 			{"key": "", "description": "", "status": ""}
+				 			{"key": "FIBIOS-443", "description": "App begint te meten zonder vinger op camera", "status": "Closed"},
+				 			{"key": "FIBIOS-449", "description": "Log connected user with crashlytics", "status": "Closed"},
+				 			{"key": "FIBIOS-450", "description": "Improve the finger detection algorithm", "status": "Closed"},
+				 			{"key": "FIBIOS-451", "description": "Bug where you can't measure twice", "status": "Closed"},
+				 			{"key": "FIBIOS-457", "description": "AlertView crashing. Statistics from Chrashlytics", "status": "Closed"},
+				 			{"key": "FIBIOS-461", "description": "Make Notification & Location onboarding screens optional.", "status": "Closed"}
 				 			]
 				 	},
 				 	"unit_tests": {
@@ -31,5 +53,5 @@
 				 			]
 				 	}
 				 }
-		}
+	}
 }
