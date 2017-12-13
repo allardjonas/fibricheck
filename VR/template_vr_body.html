@@ -343,7 +343,7 @@
   <br />
 
   <div>
-    <table id="change_requests">
+    <table class="table" id="change_requests">
 
     </table>
   </div>
@@ -428,7 +428,7 @@
   <br />
 
   <div>
-    <table id="unit_tests">
+    <table class="table" id="unit_tests">
 
     </table>
   </div>
@@ -456,7 +456,8 @@
 
   effects = content.software_version_checklist.effects;
   available_info = content.release_form.information_available;
-  //change_requests = content.anexxes.change_requests.items;
+  change_requests = content.annexes.change_requests.items;
+  unit_tests = content.annexes.unit_tests.items;
 
   var table_effects = "";
   for (var i=0; i<effects.length; i++) {
@@ -472,13 +473,19 @@
 
     document.getElementById("available").innerHTML = table_available_info;
 
-  /*var table_change_requests = "";
+  var table_change_requests = "<tr><th>Key</th><th>Description</th><th>Status</th></tr>";
   for (var i=0; i<change_requests.length; i++) {
     table_change_requests += "<tr><td>" + change_requests[i].key +"</td><td>" + change_requests[i].description + "</td><td>" + change_requests[i].status + "</td></tr>";
   }
 
-    document.getElementById("change_requests").innerHTML = table_change_requests;*/
+  document.getElementById("change_requests").innerHTML = table_change_requests;
 
+  var table_unit_tests = "<tr><th>Key</th><th>Description</th><th>Status</th></tr>";
+  for (var i=0; i<unit_tests.length; i++) {
+    table_unit_tests += "<tr><td>" + unit_tests[i].key +"</td><td>" + unit_tests[i].description + "</td><td>" + unit_tests[i].status + "</td></tr>";
+  }
+
+  document.getElementById("unit_tests").innerHTML = table_unit_tests;
 
 
 </script>

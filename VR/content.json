@@ -49,7 +49,7 @@
 				 	},
 				 	"unit_tests": {
 				 		"items": [
-				 			{"key": "", "description": "", "status": ""}
+				 			{"key": "BeatListenerTest", "description": "Heartrate test", "status": "Passed"}
 				 			]
 				 	}
 				 }
