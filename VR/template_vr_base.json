@@ -4,7 +4,7 @@
   "schema" : {
     "fields" : {
       "name": { "type": "string" },
-      "version": { "type": "number" },
+      "version": { "type": "string" },
       "software_safety_class": { "type": "string" },
       "software_version_checklist": {
           "type": "object",

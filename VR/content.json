@@ -1,0 +1,35 @@
+{
+	"content":
+  {
+    "name": "GF160",
+				 "version": "1.1.6",
+				 "software_safety_class": "B",
+				 "software_version_checklist": {
+				 	"effetcs": [
+				 		{"title": "", "has_effect": true}
+				 		],
+				 	"justification": "",
+				 	"signature": {"date": "", "title": "", "base64_signature": ""}
+				 },
+				 "release_form": {
+				 	"information_available": [
+
+				 		],
+				 	"justificatin": "",
+				 	"git_information": {"release_commit_number": "", "previous_version_number": 1.1, "previous_master_commit": 1},
+				 	"signature": {"date": "", "title": "", "base64_signature": ""}
+				 },
+				 "annexes": {
+				 	"change_requests": {
+				 		"items": [
+				 			{"key": "", "description": "", "status": ""}
+				 			]
+				 	},
+				 	"unit_tests": {
+				 		"items": [
+				 			{"key": "", "description": "", "status": ""}
+				 			]
+				 	}
+				 }
+		}
+}
