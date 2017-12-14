@@ -25,12 +25,12 @@
 				 },
 				 "release_form": {
 				 	"information_available": [
-							{"title": "An updated version of the user needs, requirements and technical specifications?", "available": false},
-							{"title": "An updated version of the prduct anomaly list (PAL)?", "available": false},
+							{"title": "An updated version of the user needs, requirements and technical specifications?", "available": true},
+							{"title": "An updated version of the prduct anomaly list (PAL)?", "available": true},
 							{"title": "An updated version of the product SOUP list?", "available": true},
 							{"title": "unit test results (if applicable)", "available": true},
 							{"title": "Software system & integratin test results", "available": true},
-							{"title": "Updated version of the Risk Management Report (if required)", "available": true}
+							{"title": "Updated version of the Risk Management Report (if required)", "available": false}
 				 		],
 				 	"justification": "Not required.",
 				 	"git_information": {"release_commit_number": "8716d01", "previous_version_number": "1.1.3", "previous_master_commit": "aa40cb"},
@@ -43,6 +43,22 @@
 				 			{"key": "FIBIOS-449", "description": "Log connected user with crashlytics", "status": "Closed"},
 				 			{"key": "FIBIOS-450", "description": "Improve the finger detection algorithm", "status": "Closed"},
 				 			{"key": "FIBIOS-451", "description": "Bug where you can't measure twice", "status": "Closed"},
+				 			{"key": "FIBIOS-457", "description": "AlertView crashing. Statistics from Chrashlytics", "status": "Closed"},{"key": "FIBIOS-443", "description": "App begint te meten zonder vinger op camera", "status": "Closed"},
+				 			{"key": "FIBIOS-449", "description": "Log connected user with crashlytics", "status": "Closed"},
+				 			{"key": "FIBIOS-450", "description": "Improve the finger detection algorithm", "status": "Closed"},
+				 			{"key": "FIBIOS-451", "description": "Bug where you can't measure twice", "status": "Closed"},
+				 			{"key": "FIBIOS-457", "description": "AlertView crashing. Statistics from Chrashlytics", "status": "Closed"},{"key": "FIBIOS-443", "description": "App begint te meten zonder vinger op camera", "status": "Closed"},
+				 			{"key": "FIBIOS-449", "description": "Log connected user with crashlytics", "status": "Closed"},
+				 			{"key": "FIBIOS-450", "description": "Improve the finger detection algorithm", "status": "Closed"},
+				 			{"key": "FIBIOS-451", "description": "Bug where you can't measure twice", "status": "Closed"},
+				 			{"key": "FIBIOS-457", "description": "AlertView crashing. Statistics from Chrashlytics", "status": "Closed"},{"key": "FIBIOS-443", "description": "App begint te meten zonder vinger op camera", "status": "Closed"},
+				 			{"key": "FIBIOS-449", "description": "Log connected user with crashlytics", "status": "Closed"},
+				 			{"key": "FIBIOS-450", "description": "Improve the finger detection algorithm", "status": "Closed"},
+				 			{"key": "FIBIOS-451", "description": "Bug where you can't measure twice", "status": "Closed"},
+				 			{"key": "FIBIOS-457", "description": "AlertView crashing. Statistics from Chrashlytics", "status": "Closed"},{"key": "FIBIOS-443", "description": "App begint te meten zonder vinger op camera", "status": "Closed"},
+				 			{"key": "FIBIOS-449", "description": "Log connected user with crashlytics", "status": "Closed"},
+				 			{"key": "FIBIOS-450", "description": "Improve the finger detection algorithm", "status": "Closed"},
+				 			{"key": "FIBIOS-451", "description": "Bug where you can't measure twice", "status": "Closed"},
 				 			{"key": "FIBIOS-457", "description": "AlertView crashing. Statistics from Chrashlytics", "status": "Closed"},
 				 			{"key": "FIBIOS-461", "description": "Make Notification & Location onboarding screens optional.", "status": "Closed"}
 				 			]
@@ -50,6 +66,47 @@
 				 	"unit_tests": {
 				 		"items": [
 				 			{"key": "BeatListenerTest", "description": "Heartrate test", "status": "Passed"}
+				 			]
+				 	},
+				 	"PAL": {
+				 		"items": [
+				 			{"problem": "No product anomalies created for this project.", "motivation_remark": ""}
+				 			]
+				 	},
+				 	"SOUP": {
+				 		"items": [
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
+				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"}
 				 			]
 				 	}
 				 }
