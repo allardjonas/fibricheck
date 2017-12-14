@@ -7,6 +7,17 @@
                 "NL": "FibriCheck Metingrapport",
                 "EN": "FibriCheck Measurement Report"
 			}
+
+		},
+		{
+			"key": "version_report",
+			"text": {
+				"DE": "vezion rapurt",
+                "FR": "Raport version",
+                "NL": "versie rapport",
+                "EN": "version report"
+			}
+
 		},
 
 	]

@@ -100,6 +100,45 @@
                     }
                   }
               }
+            },
+            "PAL": {
+              "type": "object",
+              "fields": {
+                "items":
+                {
+                  "type": "array",
+                  "type_configuration": {
+                    "type": "object",
+                    "fields": {
+                      "problem": {"type": "string"},
+                      "motivation_remark": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            },
+            "SOUP": {
+              "type": "object",
+              "fields": {
+                "items":
+                {
+                  "type": "array",
+                  "type_configuration": {
+                      "type": "object",
+                      "fields": {
+                        "title": {"type": "string"},
+                        "manufacturer": {"type": "string"},
+                        "general_description": {"type": "string"},
+                        "version": {"type": "string"},
+                        "release_date": {"type": "string"},
+                        "purpose_of_the_soup": {"type": "string"},
+                        "expected_limit": {"type": "string"},
+                        "reasoning_for_use_in_medical_device": {"type": "string"},
+                        "links_with_other_software_libraries": {"type": "string"}
+                      }
+                  }
+                }
+              }
             }
         }
       }
