@@ -43,6 +43,32 @@
 
   }
 
+  table.information td{
+    margin: 5px;
+    padding: 5px;
+  }
+
+  table.soup td{
+    margin: 1px;
+    padding: 1px;
+  }
+
+  table.soup th{
+    margin: 1px;
+    padding: 1px;
+  }
+
+
+  table.risks td{
+    margin: 1px;
+    padding: 1px;
+  }
+
+  table.risks th{
+    margin: 1px;
+    padding: 1px;
+  }
+
   .head {
     margin-top: 450px;
     margin-bottom: 450px;
@@ -63,7 +89,6 @@
   .title {
     color: grey;
   }
-}
 
   hr {
     color: black;
@@ -80,11 +105,11 @@
   }
 
   .small {
-    font-size: 10px;
+    font-size: 6px;
   }
 
   .small-specifications {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .small-information {
@@ -143,7 +168,7 @@
   </div>
 
   <div class="header-pages">
-    <p class="pages"><span id="page-number"></span> of 8</p>
+    <p class="pages"><span id="page-number"></span></p>
   </div>
 
   <hr />
@@ -190,7 +215,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -267,7 +292,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -284,7 +309,7 @@
   <h6>Is the following information available?</h6>
 
   <div>
-    <table class="small-information" id="available">
+    <table class="small-information information" id="available">
 
     </table>
   </div>
@@ -351,7 +376,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -399,7 +424,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -447,7 +472,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -495,7 +520,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -515,7 +540,7 @@
   <br />
 
   <div>
-    <table class="table small" id="SOUP">
+    <table class="table small soup" id="SOUP">
 
     </table>
   </div>
@@ -543,7 +568,7 @@
   </div>
 
   <div class="header-pages">
-    <p><span id="page-number"></span> of 8</p>
+    <p><span id="page-number"></span></p>
   </div>
 </div>
 
@@ -563,7 +588,7 @@
   <br />
 
   <div>
-    <table class="table small" id="risks">
+    <table class="table small risks" id="risks">
 
     </table>
   </div>
@@ -588,12 +613,12 @@
   var yes_no_effects = "";
   for (var i=0; i<effects.length; i++) {
     if (effects[i].has_effect == true){
-      yes_no_effects = "<td><strong>Yes</strong></td><td><s>No</s></td>";
+      yes_no_effects = "<td style=\"padding:0 15px 0 15px;\"><strong>Yes</strong></td><td style=\"padding:0 15px 0 15px;\"><s>No</s></td>";
     }
     else{
-      yes_no_effects = "<td><s>Yes</s></td><td><strong>No</strong></td>";
+      yes_no_effects = "<td style=\"padding:0 15px 0 15px;\"><s>Yes</s></td><td style=\"padding:0 15px 0 15px;\"><strong>No</strong></td>";
     }
-    table_effects += "<tr><td>" + effects[i].title + yes_no_effects + "</tr>";
+    table_effects += "<tr><td>" + effects[i].title + "</td>" + yes_no_effects + "</tr>";
   }
 
     document.getElementById("specifications").innerHTML = table_effects;
@@ -602,10 +627,10 @@
   var yes_no_available = "";
   for (var i=0; i<available_info.length; i++) {
     if (available_info[i].available == true){
-      yes_no_available = "<td><strong>Yes</strong></td><td><s>No</s></td>";
+      yes_no_available = "<td style=\"padding:0 15px 0 15px;\"><strong>Yes</strong></td><td style=\"padding:0 15px 0 15px;\"><s>No</s></td>";
     }
     else{
-      yes_no_available = "<td><s>Yes</s></td><td><strong>No</strong></td>";
+      yes_no_available = "<td style=\"padding:0 15px 0 15px;\"><s>Yes</s></td><td style=\"padding:0 15px 0 15px;\"><strong>No</strong></td>";
     }
     table_available_info += "<tr><td>" + available_info[i].title +"</td>" + yes_no_available + "</tr>";
   }
@@ -642,11 +667,43 @@
 
   var rpn = 0;
   var mrpn = 0;
+  var rpn_color = "";
+  var mrpn_color = "";
+  var rpn_bgcolor = "";
+  var mrpn_bgcolor = "";
+
   var table_risks = "<tr><th>Id</th><th>Type</th><th>Error</th><th>Effect</th><th>Severity Rate</th><th>Cause</th><th>Occurence Rate</th><th>Detection Method</th><th>Detection Rate</th><th>RPN</th><th>Mitigation Method</th><th>Mitigation Detection Rate</th><th>Mitigation Occurence Rate</th><th>mRPN</th><th>Remarks</th><th>Specifications</th></tr>";
   for (var i=0; i<risks.length; i++) {
     rpn = risks[i].severity_rate * risks[i].occurence_rate * risks[i].detection_rate;
     mrpn = risks[i].severity_rate * risks[i].mitigation_detection_rate * risks[i].mitigation_occurence_rate;
-    table_risks += "<tr><td>" + risks[i].id +"</td><td>" + risks[i].type + "</td><td>" + risks[i].error + "</td><td>" + risks[i].effect + "</td><td>" + risks[i].severity_rate + "</td><td>" + risks[i].cause + "</td><td>" + risks[i].occurence_rate + "</td><td>" + risks[i].detection_method + "</td><td>" + risks[i].detection_rate + "</td><td>" + rpn + "</td><td>" + risks[i].mitigation_method + "</td><td>" + risks[i].mitigation_detection_rate + "</td><td>" + risks[i].mitigation_occurence_rate + "</td><td>" + mrpn + "</td><td>" + risks[i].remarks + "</td><td>" + risks[i].specifications + "</td></tr>";
+
+    if(rpn <= 150) {
+      rpn_color = "#006000";
+      rpn_bgcolor = "#C6EFCE";
+    }
+    else if (rpn <= 400){
+      rpn_color = "#9B6400";
+      rpn_bgcolor = "#FFEB9C";
+    }
+    else{
+      rpn_color = "#9B0005";
+      rpn_bgcolor = "#FFC6CD";
+    }
+
+    if(mrpn <= 150) {
+      mrpn_color = "#006000";
+      mrpn_bgcolor = "#C6EFCE";
+    }
+    else if (mrpn <= 400){
+      mrpn_color = "#9B6400";
+      mrpn_bgcolor = "#FFEB9C";
+    }
+    else{
+      mrpn_color = "#9B0005";
+      mrpn_bgcolor = "#FFC6CD";
+    }
+
+    table_risks += "<tr><td>" + risks[i].id +"</td><td>" + risks[i].type + "</td><td>" + risks[i].error + "</td><td>" + risks[i].effect + "</td><td>" + risks[i].severity_rate + "</td><td>" + risks[i].cause + "</td><td>" + risks[i].occurence_rate + "</td><td>" + risks[i].detection_method + "</td><td>" + risks[i].detection_rate + "</td><td style=\"background-color:" + rpn_bgcolor + ";color:" + rpn_color + "\">" + rpn + "</td><td>" + risks[i].mitigation_method + "</td><td>" + risks[i].mitigation_detection_rate + "</td><td>" + risks[i].mitigation_occurence_rate + "</td><td style=\"background-color:" + mrpn_bgcolor + ";color:" + mrpn_color + "\">" + mrpn + "</td><td>" + risks[i].remarks + "</td><td>" + risks[i].specifications + "</td></tr>";
   }
 
   document.getElementById("risks").innerHTML = table_risks;
