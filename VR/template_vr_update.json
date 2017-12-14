@@ -224,7 +224,7 @@
                     "effect": {
                       "type": "string"
                     },
-                    "rate": {
+                    "severity_rate": {
                       "type": "number"
                     },
                     "cause": {
@@ -255,7 +255,7 @@
                       "type": "number"
                     },
                     "remarks": {
-                      "type": "number"
+                      "type": "string"
                     },
                     "specifications": {
                       "type": "string"

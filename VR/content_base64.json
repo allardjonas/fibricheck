@@ -108,6 +108,11 @@
 				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"},
 				 			{"title": "Retrofit", "manufacturer": "Square", "general_description": "A type-safe HTTP client for Android", "version": "2.3.0", "release_date": "14/05/17", "purpose_of_the_soup": "A library to make HTTP requests", "expected_limit": "none", "reasoning_for_use_in_medical_device": "Communicate with the FibriCheck servers", "links_with_other_software_libraries": "okhhtp3, mojo, guava, gson"}
 				 			]
+				 	},
+				 	"risks": {
+				 		"items": [
+				 			{	 "id": "[032e]", "type": "Labelling", "error": "Instructions for use are tampered", "effect": "Misinterpretation", "severity_rate": 5, "cause": "No paper instructions for use", "occurence_rate": 1, "detection_method": "None", "detection_rate": 10, "RPN": 50, "mitigation_method": "IFU in app/IFU website/Helpdesk/software System Tests", "mitigation_detection_rate": 3, "mitigation_occurence_rate": 1, "mRPN": 15, "remarks": "Used under supervision of a physician.", "specifications": "[68da]"}
+				 			]
 				 	}
 				 }
 	}

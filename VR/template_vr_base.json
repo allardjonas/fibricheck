@@ -153,7 +153,7 @@
                         "type": {"type": "string"},
                         "error": {"type": "string"},
                         "effect": {"type": "string"},
-                        "rate": {"type": "number"},
+                        "severity_rate": {"type": "number"},
                         "cause": {"type": "string"},
                         "occurence_rate": {"type": "number"},
                         "detection_method": {"type": "string"},
@@ -163,7 +163,7 @@
                         "mitigation_detection_rate": {"type": "number"},
                         "mitigation_occurence_rate": {"type": "number"},
                         "mRPN": {"type": "number"},
-                        "remarks": {"type": "number"},
+                        "remarks": {"type": "string"},
                         "specifications": {"type": "string"}
                       }
                   }
