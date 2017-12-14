@@ -158,11 +158,9 @@
                         "occurence_rate": {"type": "number"},
                         "detection_method": {"type": "string"},
                         "detection_rate": {"type": "number"},
-                        "RPN": {"type": "number"},
                         "mitigation_method": {"type": "string"},
                         "mitigation_detection_rate": {"type": "number"},
                         "mitigation_occurence_rate": {"type": "number"},
-                        "mRPN": {"type": "number"},
                         "remarks": {"type": "string"},
                         "specifications": {"type": "string"}
                       }
