@@ -194,6 +194,26 @@
                         }
                       }
                   }
+                },
+                "test_environments": {
+                  "type": "array",
+                  "type_configuration": {
+                    "type": "object",
+                    "fields": {
+                      "id": {"type": "string"},
+                      "name": {"type": "string"},
+                      "test_results" : {
+                        "type": "array",
+                        "type_configuration": {
+                          "type": "object",
+                          "fields": {
+                            "id": {"type": "string"},
+                            "status": {"type": "string"}
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

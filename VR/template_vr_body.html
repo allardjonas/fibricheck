@@ -885,9 +885,19 @@
 
   document.getElementById("specifications").innerHTML = table_specifications;
 
+  var countr = 1;
   var table_tests = "<tr><th>Specification ID</th><th>Test Case ID</th><th>Test Case</th><th>Test Result (Xiaomi MI5 On Android 6.0.1)</th><th>Test result (Huawei P7 On Android 5.1.1)</th></tr>";
   for (var i=0; i<specifications.length; i++) {
     for(var j=0;j<specifications[i].test_cases.length; j++){
+      if (i > 0 ){
+        if (specifications[i].id == specifications[i-countr].id){
+          specifications[i].id = "";
+          countr++;
+        }
+        else{
+          countr = 1;
+        }
+      }
       table_tests += "<tr><td>" + specifications[i].id + "</td><td>" + specifications[i].test_cases[j].test_case_id + "</td><td>" + specifications[i].test_cases[j].test_case + "</td><td>Not Tested Yet</td><td>Not Tested Yet</td></tr>"
     }
     //table_tests += "<tr><td>" + specifications[i].id +"</td><td>" + tests[i].test_case_id + "</td><td>" + tests[i].test_case + "</td><td>Not tested yet</td><td>Not tested yet</td></tr>";

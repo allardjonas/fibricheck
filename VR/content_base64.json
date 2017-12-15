@@ -157,9 +157,15 @@
 				 			{"id": "c6b6.", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If no credentials found on app opening --> {Login / Register}", "description": "", "test_cases": [{"test_case_id": "7453", "test_case": "Login / Register is displayed when opening app with no credentials stored"}]},
 				 			{"id": "d355.", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associasted user has no active prescriptions --> {Ask for prescription}", "description": "", "test_cases": [{"test_case_id": "edd5", "test_case": "Ask prescription screen is displayed when opening app with stored credentials but no active prescription"}]},
 				 			{"id": "1dfa", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "2cd5", "test_case": "Enter pincode screen is displayed when opening app with stored credentials and an active prescription"}]},
-				 			{"id": "1bla", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "9421", "test_case": "Startup screen displays the company logo"}]},
-				 			{"id": "1dkz", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "5642", "test_case": "Startup screen displays the company slogan"}]},
-				 			{"id": "zufa", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "bc9f", "test_case": "Startup screen displays login button"}]}
+				 			{"id": "8d21", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "9421", "test_case": "Startup screen displays the company logo"}]},
+				 			{"id": "8d21", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "5642", "test_case": "Startup screen displays the company slogan"}]},
+				 			{"id": "8cea", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "bc9f", "test_case": "Startup screen displays login button"}]},
+				 			{"id": "8cea", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "9c7f", "test_case": "Startup screen displays register button"}]}
+				 			],
+
+				 			"test_environments": [
+				 				{"id": "d3cc", "name": "Test Result (Xiaomi MI5 On Android 6.0.1)", "test_results": [{"id": "1074", "status": "Passed"}]},
+				 				{"id": "1668", "name": "Test Result (Huawei P7 On Android 5.1.1)", "test_results": [{"id": "1269", "status": "Passed"}]}
 				 			]
 				 	}
 				 }
