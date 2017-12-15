@@ -167,6 +167,25 @@
                   }
                 }
               }
+            },
+            "specifications": {
+              "type": "object",
+              "fields": {
+                "items":
+                {
+                  "type": "array",
+                  "type_configuration": {
+                      "type": "object",
+                      "fields": {
+                        "id": {"type": "string"},
+                        "user_need": {"type": "string"},
+                        "requirement": {"type": "string"},
+                        "name": {"type": "string"},
+                        "description": {"type": "string"}
+                      }
+                  }
+                }
+              }
             }
         }
       }

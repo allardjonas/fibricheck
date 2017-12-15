@@ -44,18 +44,39 @@
   }
 
   table.information td{
-    margin: 5px;
-    padding: 5px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  table.change-requests td {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  table.unit-tests td {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  table.pal td {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 
   table.soup td{
-    margin: 1px;
-    padding: 1px;
+    margin: 10px;
+    padding: 10px;
   }
 
   table.soup th{
-    margin: 1px;
-    padding: 1px;
+    margin: 10px;
+    padding: 10px;
   }
 
 
@@ -81,7 +102,7 @@
 
   .line{
     display: inline-block;
-    margin-left: 55px;
+    margin-left: 16px;
     line-height: 50%;
     position: relative;
   }
@@ -97,6 +118,7 @@
 
   body {
     counter-reset: page_number;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   }
 
   #page-number:after {
@@ -158,7 +180,7 @@
 
   <div class="header-title">
 
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -174,22 +196,22 @@
   <hr />
 
 <div class="head text-center">
-  <h2>VERSION REPORT:</h2>
+  <h2><strong>VERSION REPORT:</strong></h2>
   <h2 id="name" class="title">$content.name</h2>
   <h2 id="version" class="title">$content.version</h2>
 </div>
 
 <table>
   <tr>
-    <td>Application:</td>
+    <td><strong>Application:</strong></td>
     <td class="title">&emsp;$content.name</td>
   </tr>
   <tr>
-    <td>Version number:</td>
+    <td><strong>Version number:</strong></td>
     <td class="title">&emsp;$content.version</td>
   </tr>
   <tr>
-    <td>Software Safety Class:</td>
+    <td><strong>Software Safety Class:</strong></td>
     <td class="title">&emsp;$content.software_safety_class</td>
   </tr>
 </table>
@@ -206,7 +228,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -225,12 +247,12 @@
 <br />
 
 <div>
-  <h5 class="text-center">SOFTWARE VERSION CHECKLIST</h5>
+  <h5 class="text-center"><strong>SOFTWARE VERSION CHECKLIST</strong></h5>
 
   <br />
   <br />
 
-  <h6>Do the changes have effect on the following?</h6>
+  <h6><strong>Do the changes have effect on the following?</strong></h6>
 
   <div>
     <table class="small-specifications" id="specifications">
@@ -254,16 +276,16 @@
 
   <br />
 
-  <h6>If No, provide a justification why not:</h6>
+  <h6><strong>If No, provide a justification why not:</strong></h6>
 
-<textarea class="textarea" rows="10" cols="100">$content.software_version_checklist.justification</textarea>
+<textarea class="textarea" rows="8" cols="90">$content.software_version_checklist.justification</textarea>
 </div>
 
 <div class="row">
   <div class="line">
-    <p>Required Approvals: Signature(s)/Date</p>
-    <p>Date: $content.software_version_checklist.signature.date</p>
-    <p>$content.software_version_checklist.signature.title: </p>
+    <p><strong>Required Approvals:</strong> Signature(s)/Date</p><br /><br /><br /><br /><br />
+    <p><strong>Date:</strong> $content.software_version_checklist.signature.date</p>
+    <p><strong>$content.software_version_checklist.signature.title: </strong></p>
   </div>
   <div class="line">
       <img src="" id="quality_manager" alt="handtekening" height="100" width="200">
@@ -282,7 +304,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -302,11 +324,11 @@
 <br />
 
 <div>
-  <h5 class="text-center">RELEASE FORM</h5>
+  <h5 class="text-center"><strong>RELEASE FORM</strong></h5>
 
   <br />
 
-  <h6>Is the following information available?</h6>
+  <h6><strong>Is the following information available?</strong></h6>
 
   <div>
     <table class="small-information information" id="available">
@@ -320,16 +342,16 @@
   <p>Software system &amp; integration test results <span class="yesno"><strong>Yes</strong>&emsp;<s>No</s></span></p>
   <p> <span class="yesno"><s>Yes</s>&emsp;<strong>No</strong></span></p>-->
 
-  <h6>If No, provide a justification why not: </h6>
+  <h6><strong>If No, provide a justification why not: </strong></h6>
 
-<textarea rows="10" cols="100">$content.release_form.justification</textarea>
+<textarea rows="7" cols="75">$content.release_form.justification</textarea>
 
 <br />
 <br />
 
-<h6>Release Git information:</h6>
+<h6><strong>Release Git information:</strong></h6>
 
-<p><strong>Release commit number:</strong>&emsp;<span class="red">$content.release_form.git_information.release_commit_number</span></p>
+<p>Release commit number:&emsp;<span class="red">$content.release_form.git_information.release_commit_number</span></p>
 
 <br />
 
@@ -345,9 +367,9 @@
 
 <div class="row">
   <div class="line">
-    <p>Required Approvals: Signature(s)/Date</p>
-    <p>Date: $content.release_form.signature.date</p>
-    <p>$content.release_form.signature.title: </p>
+    <p><strong>Required Approvals:</strong> Signature(s)/Date</p><br /><br /><br /><br /><br />
+    <p><strong>Date:</strong> $content.release_form.signature.date</p>
+    <p><strong>$content.release_form.signature.title:</strong></p>
   </div>
   <div class="line">
       <img src="" id="project_manager" alt="handtekening" height="100" width="200">
@@ -366,7 +388,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -386,17 +408,17 @@
 <br />
 
 <div>
-  <h5 class="text-center">ANNEX A</h5>
+  <h5 class="text-center"><strong>ANNEX A</strong></h5>
   <p class="text-center">(optional)</p>
 
   <br />
 
-  <h5 class="text-center">SOFTWARE VERSION CHANGE REQUESTS (JIRA ISSUES)</h5>
+  <h5 class="text-center"><strong>SOFTWARE VERSION CHANGE REQUESTS (JIRA ISSUES)</strong></h5>
 
   <br />
 
   <div>
-    <table class="table small-change-requests" id="change_requests">
+    <table class="table small-change-requests change-requests" id="change_requests">
 
     </table>
   </div>
@@ -414,7 +436,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -434,17 +456,17 @@
 <br />
 
 <div>
-  <h5 class="text-center">ANNEX B</h5>
+  <h5 class="text-center"><strong>ANNEX B</strong></h5>
   <p class="text-center">(informative)</p>
 
   <br />
 
-  <h5 class="text-center">SOFTWARE UNIT TEST RESULTS</h5>
+  <h5 class="text-center"><strong>SOFTWARE UNIT TEST RESULTS</strong></h5>
   <!--{{report_measurement_title}} vb voor localizations-->
   <br />
 
   <div>
-    <table class="table small-unit-tests" id="unit_tests">
+    <table class="table small-unit-tests unit-tests" id="unit_tests">
 
     </table>
   </div>
@@ -462,7 +484,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -482,17 +504,17 @@
 <br />
 
 <div>
-  <h5 class="text-center">ANNEX C</h5>
+  <h5 class="text-center"><strong>ANNEX C</strong></h5>
   <p class="text-center">(informative)</p>
 
   <br />
 
-  <h5 class="text-center">PAL</h5>
+  <h5 class="text-center"><strong>PAL</strong></h5>
   <!--{{report_measurement_title}} vb voor localizations-->
   <br />
 
   <div>
-    <table class="table small-pal" id="PAL">
+    <table class="table small-pal pal" id="PAL">
 
     </table>
   </div>
@@ -510,7 +532,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -530,12 +552,12 @@
 <br />
 
 <div>
-  <h5 class="text-center">ANNEX D</h5>
+  <h5 class="text-center"><strong>ANNEX D</strong></h5>
   <p class="text-center">(informative)</p>
 
   <br />
 
-  <h5 class="text-center">SOUP</h5>
+  <h5 class="text-center"><strong>SOUP</strong></h5>
   <!--{{report_measurement_title}} vb voor localizations-->
   <br />
 
@@ -558,7 +580,7 @@
   </div>
 
   <div class="header-title">
-    <h5>VERSION REPORT</h5>
+    <h5><strong>VERSION REPORT</strong></h5>
 
     <div class="doc">
       <p class="name">Doc: GF160</p>
@@ -578,12 +600,12 @@
 <br />
 
 <div>
-  <h5 class="text-center">ANNEX E</h5>
+  <h5 class="text-center"><strong>ANNEX E</strong></h5>
   <p class="text-center">(informative)</p>
 
   <br />
 
-  <h5 class="text-center">RISKS</h5>
+  <h5 class="text-center"><strong>RISKS</strong></h5>
   <!--{{report_measurement_title}} vb voor localizations-->
   <br />
 
