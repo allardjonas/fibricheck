@@ -181,7 +181,17 @@
                         "user_need": {"type": "string"},
                         "requirement": {"type": "string"},
                         "name": {"type": "string"},
-                        "description": {"type": "string"}
+                        "description": {"type": "string"},
+                        "test_cases": {
+                            "type": "array",
+                            "type_configuration": {
+                              "type": "object",
+                              "fields": {
+                                "test_case_id": {"type": "string"},
+                                "test_case": {"type": "string"}
+                              }
+                            }
+                        }
                       }
                   }
                 }

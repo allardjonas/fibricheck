@@ -149,14 +149,17 @@
 				 	},
 				 	"specifications": {
 				 		"items": [
-				 			{"id": "1e52.", "user_need": "Open App", "requirement": "Check for last activity", "name": "If app is opened for the first time --> {Login / Register}", "description": ""},
-				 			{"id": "d81c.", "user_need": "", "requirement": "", "name": "If app is reopened after no more than 5 minutes of inactivity --> open last open screen", "description": ""},
-				 			{"id": "e860.", "user_need": "", "requirement": "", "name": "[Android >= 6.0] If app is reopened after more than 5 minutes of inactivity, app is updated in the meantime and permissions are changed --> {Onboarding}", "description": ""},
-				 			{"id": "f38c.", "user_need": "", "requirement": "", "name": "If app is reopened after more than 5 minutes of inactivity --> {Ask pincode}", "description": ""},
+				 			{"id": "1e52.", "user_need": "Open App", "requirement": "Check for last activity", "name": "If app is opened for the first time --> {Login / Register}", "description": "", "test_cases": [{"test_case_id": "d3cc", "test_case": "Login / Register screen is displayed if app is opened for the first time after installation"}]},
+				 			{"id": "d81c.", "user_need": "Open App", "requirement": "Check for last activity", "name": "If app is reopened after no more than 5 minutes of inactivity --> open last open screen", "description": "", "test_cases": [{"test_case_id": "1668", "test_case": "App reopens last screen if app is reopened after no more than 5 minutes"}]},
+				 			{"id": "e860.", "user_need": "Open App", "requirement": "Check for last activity", "name": "[Android >= 6.0] If app is reopened after more than 5 minutes of inactivity, app is updated in the meantime and permissions are changed --> {Onboarding}", "description": "", "test_cases": [{"test_case_id": "ad6c", "test_case": "Onboarding screen appears if app is reopened after more then 5 minutes and an update has occured"}]},
+				 			{"id": "f38c.", "user_need": "Open App", "requirement": "Check for last activity", "name": "If app is reopened after more than 5 minutes of inactivity --> {Ask pincode}", "description": "", "test_cases": [{"test_case_id": "3da8", "test_case": "App reopens last screen if app is reopened after no more than 5 minutes"}]},
 
-				 			{"id": "c6b6.", "user_need": "", "requirement": "Check for stored credentials", "name": "If no credentials found on app opening --> {Login / Register}", "description": ""},
-				 			{"id": "d355.", "user_need": "", "requirement": "", "name": "If credentials found on app opening and associasted user has no active prescriptions --> {Ask for prescription}", "description": ""},
-				 			{"id": "1dfa", "user_need": "", "requirement": "", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": ""}
+				 			{"id": "c6b6.", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If no credentials found on app opening --> {Login / Register}", "description": "", "test_cases": [{"test_case_id": "7453", "test_case": "Login / Register is displayed when opening app with no credentials stored"}]},
+				 			{"id": "d355.", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associasted user has no active prescriptions --> {Ask for prescription}", "description": "", "test_cases": [{"test_case_id": "edd5", "test_case": "Ask prescription screen is displayed when opening app with stored credentials but no active prescription"}]},
+				 			{"id": "1dfa", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "2cd5", "test_case": "Enter pincode screen is displayed when opening app with stored credentials and an active prescription"}]},
+				 			{"id": "1bla", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "9421", "test_case": "Startup screen displays the company logo"}]},
+				 			{"id": "1dkz", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "5642", "test_case": "Startup screen displays the company slogan"}]},
+				 			{"id": "zufa", "user_need": "Open App", "requirement": "Check for stored credentials", "name": "If credentials found on app opening and associated user has an active prescription --> {Enter pincode}", "description": "", "test_cases": [{"test_case_id": "bc9f", "test_case": "Startup screen displays login button"}]}
 				 			]
 				 	}
 				 }
