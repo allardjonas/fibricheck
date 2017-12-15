@@ -197,6 +197,10 @@
     margin-bottom: 100px;
   }
 
+  .borderless td, .borderless th {
+    border: none !important;
+}
+
   </style>
 
 </head>
@@ -691,7 +695,7 @@
   <br />
 
   <div>
-    <table class="table small specifications" id="specifications">
+    <table class="table borderless small specifications" id="specifications">
 
     </table>
   </div>
@@ -739,7 +743,7 @@
   <br />
 
   <div>
-    <table class="table small tests" id="tests">
+    <table class="table borderless small tests" id="tests">
 
     </table>
   </div>
@@ -760,6 +764,7 @@
   SOUP = content.annexes.SOUP.items;
   risks = content.annexes.risks.items;
   specifications = content.annexes.specifications.items;
+  results = content.annexes.specifications.test_environments;
 
   var table_effects = "";
   var yes_no_effects = "";
@@ -886,6 +891,7 @@
   document.getElementById("specifications").innerHTML = table_specifications;
 
   var countr = 1;
+  var result = "";
   var table_tests = "<tr><th>Specification ID</th><th>Test Case ID</th><th>Test Case</th><th>Test Result (Xiaomi MI5 On Android 6.0.1)</th><th>Test result (Huawei P7 On Android 5.1.1)</th></tr>";
   for (var i=0; i<specifications.length; i++) {
     for(var j=0;j<specifications[i].test_cases.length; j++){
@@ -898,9 +904,15 @@
           countr = 1;
         }
       }
-      table_tests += "<tr><td>" + specifications[i].id + "</td><td>" + specifications[i].test_cases[j].test_case_id + "</td><td>" + specifications[i].test_cases[j].test_case + "</td><td>Not Tested Yet</td><td>Not Tested Yet</td></tr>"
+      for(var k=0;k<results.length; k++){
+        for(var l=0;l<results[k].test_results.length; l++){
+          if(specifications[i].test_cases[j].test_case_id == results[k].id){
+            result = results[k].test_results[l].status;
+          }
+        }
+      }
+      table_tests += "<tr><td>" + specifications[i].id + "</td><td>" + specifications[i].test_cases[j].test_case_id + "</td><td>" + specifications[i].test_cases[j].test_case + "</td><td style=\"color: #006000; background-color: #C6EFCE\">"  + result + "</td><td style=\"color: #006000; background-color: #C6EFCE\">" + result + "</td></tr>"
     }
-    //table_tests += "<tr><td>" + specifications[i].id +"</td><td>" + tests[i].test_case_id + "</td><td>" + tests[i].test_case + "</td><td>Not tested yet</td><td>Not tested yet</td></tr>";
   }
 
   document.getElementById("tests").innerHTML = table_tests;
