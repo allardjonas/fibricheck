@@ -792,8 +792,26 @@
 
   document.getElementById("risks").innerHTML = table_risks;
 
+  var count = 1;
+  var counter = 1;
   var table_specifications = "<tr><th>Specification ID</th><th>User Need</th><th>Requirement</th><th>Specifications</th><th>Specification Description</th></tr>";
   for (var i=0; i<specifications.length; i++) {
+    if (i > 0 ){
+      if (specifications[i].user_need == specifications[i-count].user_need){
+        specifications[i].user_need = "";
+        count++;
+      }
+      else{
+        count = 1;
+      }
+      if (specifications[i].requirement == specifications[i-counter].requirement){
+        specifications[i].requirement = "";
+        counter++;
+      }
+      else{
+        counter = 1;
+      }
+    }
     table_specifications += "<tr><td>" + specifications[i].id +"</td><td>" + specifications[i].user_need +"</td><td>" + specifications[i].requirement +"</td><td>" + specifications[i].name +"</td><td>" + specifications[i].description +"</td></tr>";
   }
 
