@@ -891,9 +891,11 @@
   document.getElementById("specifications").innerHTML = table_specifications;
 
   var countr = 1;
-  var result = "";
+  var result = [];
   var column_count = 1;
   var columns = results.length;
+  var close_head = 1;
+  var close_row = 1;
   var table_tests = "<tr><th>Specification ID</th><th>Test Case ID</th><th>Test Case</th>";
   //<th>Test Result (Xiaomi MI5 On Android 6.0.1)</th><th>Test result (Huawei P7 On Android 5.1.1)</th>
   for (var i=0; i<specifications.length; i++) {
@@ -913,7 +915,17 @@
           table_tests += results[k].name;
           table_tests += "</th>";
           column_count++;
+          }
+
+        for(var l=0;l<results[k].test_results.length;l++){
+          result[k] = results[k].test_results[l].status;
         }
+
+        /*else{
+          table_tests += "<td>";
+          table_tests =+ results[k].test_results[1];
+          table_tests += "</td>";
+        }*/
         /*for(var l=0;l<results[k].test_results.length; l++){
           if(specifications[i].test_cases[j].test_case_id == results[k].id){
             result = results[k].test_results[l].status;
@@ -921,8 +933,19 @@
           //table_tests += "<th>" + results[k].name + "</th>";
         }*/
       }
-      table_tests += "</tr>";
-      table_tests += "<tr><td>" + specifications[i].id + "</td><td>" + specifications[i].test_cases[j].test_case_id + "</td><td>" + specifications[i].test_cases[j].test_case + "</td></tr>";
+      if(close_head == 1){
+        table_tests += "</tr>";
+        close_head++;
+      }
+      table_tests += "<tr><td>" + specifications[i].id + "</td><td>" + specifications[i].test_cases[j].test_case_id + "</td><td>" + specifications[i].test_cases[j].test_case + "</td>";
+
+      for(var m=0;m<result.length;m++){
+        table_tests += "<td>" + result[m] + "</td>";
+      }
+      if(close_row == 1){
+        table_tests += "</tr>";
+        close_row++;
+      }
       /*<td style=\"color: #006000; background-color: #C6EFCE\">"  + result + "</td><td style=\"color: #006000; background-color: #C6EFCE\">" + result + "</td>*/
     }
   }
