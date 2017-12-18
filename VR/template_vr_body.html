@@ -23,6 +23,7 @@
     position: relative;
     display: inline-block;
     width: 30%;
+    height: 150px;
     vertical-align: bottom;
   }
 
@@ -30,10 +31,12 @@
     position: relative;
     display: inline-block;
     width: 55%;
+    height: 80px;
     vertical-align: bottom;
   }
 
   .header-pages {
+    height: 25px;
     position: relative;
     display: inline-block;
     vertical-align: bottom;
@@ -142,6 +145,7 @@
   }
 
   hr {
+    position: relative;
     color: black;
     background-color: black;
   }
@@ -918,7 +922,9 @@
           }
 
         for(var l=0;l<results[k].test_results.length;l++){
-          result[k] = results[k].test_results[l].status;
+          //if(specifications[i].test_cases[j].test_case_id == results[k].id){
+            result[k] = results[k].test_results[l].status;
+          //}
         }
 
         /*else{
@@ -940,6 +946,7 @@
       table_tests += "<tr><td>" + specifications[i].id + "</td><td>" + specifications[i].test_cases[j].test_case_id + "</td><td>" + specifications[i].test_cases[j].test_case + "</td>";
 
       for(var m=0;m<result.length;m++){
+
         table_tests += "<td>" + result[m] + "</td>";
       }
       if(close_row == 1){
