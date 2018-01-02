@@ -293,9 +293,20 @@
   <h6><strong>Do the changes have effect on the following?</strong></h6>
 
   <div>
-    <table class="small-specifications" id="changes">
-
+    <table class="small-specifications">
+      #foreach($effect in $content.software_version_checklist.effects)
+      <tr>
+        <td>$effect.title</td>
+        #if($effect.has_effect == true)
+          <td style=\"padding:0 15px 0 15px;\"><strong>Yes</strong></td><td style=\"padding:0 15px 0 15px;\"><s>No</s></td>
+        #else
+          <td style=\"padding:0 15px 0 15px;\"><s>Yes</s></td><td style=\"padding:0 15px 0 15px;\"><strong>No</strong></td>
+        #end
+      </tr>
+      #end
     </table>
+    <!--<table class="small-specifications" id="changes">
+    </table>-->
   </div>
 
   <!--<p>Application specifications <span class="yesno"><strong>Yes</strong>&emsp;<s>No</s></span></p>
@@ -326,7 +337,7 @@
     <p><strong>$content.software_version_checklist.signature.title: </strong></p>
   </div>
   <div class="line">
-      <img src="" id="quality_manager" alt="handtekening" height="100" width="200">
+      <img src="$content.software_version_checklist.signature.base64_signature" id="quality_manager" alt="handtekening" height="100" width="200">
   </div>
 </div>
 
@@ -369,9 +380,21 @@
   <h6><strong>Is the following information available?</strong></h6>
 
   <div>
-    <table class="small-information information" id="available">
-
+    <table class="small-information information">
+      #foreach($available_info in $content.release_form.information_available)
+      <tr>
+        <td>$available_info.title</td>
+        #if($available_info.available == true)
+          <td style=\"padding:0 15px 0 15px;\"><strong>Yes</strong></td><td style=\"padding:0 15px 0 15px;\"><s>No</s></td>
+        #else
+          <td style=\"padding:0 15px 0 15px;\"><s>Yes</s></td><td style=\"padding:0 15px 0 15px;\"><strong>No</strong></td>
+        #end
+      </tr>
+      #end
     </table>
+    <!--<table class="small-information information" id="available">
+
+    </table>-->
   </div>
 
   <br />
@@ -413,7 +436,7 @@
     <p><strong>$content.release_form.signature.title:</strong></p>
   </div>
   <div class="line">
-      <img src="" id="project_manager" alt="handtekening" height="100" width="200">
+      <img src="$content.release_form.signature.base64_signature" id="project_manager" alt="handtekening" height="100" width="200">
   </div>
 </div>
 
@@ -459,9 +482,23 @@
   <br />
 
   <div>
-    <table class="table small-change-requests change-requests" id="change_requests">
+    <table class="table small-change-requests change-requests">
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+    #foreach($change_request in $content.annexes.change_requests.items)
+    <tr>
+      <td>$change_request.key</td>
+      <td>$change_request.description</td>
+      <td>$change_request.status</td>
+    </tr>
+    #end
+  </table>
+    <!--<table class="table small-change-requests change-requests" id="change_requests">
 
-    </table>
+    </table>-->
   </div>
 </div>
 
@@ -507,9 +544,23 @@
   <br />
 
   <div>
-    <table class="table small-unit-tests unit-tests" id="unit_tests">
-
+    <table class="table small-unit-tests unit-tests">
+      <tr>
+        <th>Key</th>
+        <th>Description</th>
+        <th>Status</th>
+      </tr>
+      #foreach($unit_test in $content.annexes.unit_tests.items)
+      <tr>
+        <td>$unit_test.key</td>
+        <td>$unit_test.description</td>
+        <td>$unit_test.status</td>
+      </tr>
+      #end
     </table>
+    <!--<table class="table small-unit-tests unit-tests" id="unit_tests">
+
+    </table>-->
   </div>
 </div>
 
@@ -555,9 +606,23 @@
   <br />
 
   <div>
-    <table class="table small-pal pal" id="PAL">
 
+    <table class="table small-pal pal">
+      <tr>
+        <th>Problem</th>
+        <th>Motivation Remark</th>
+      </tr>
+    #foreach ($anomaly in $content.annexes.PAL.items)
+        <tr>
+          <td>$anomaly.problem</td>
+          <td>$anomaly.motivation_remark</td>
+        </tr>
+    #end
     </table>
+
+    <!--<table class="table small-pal pal" id="PAL">
+
+    </table>-->
   </div>
 </div>
 
@@ -603,10 +668,35 @@
   <br />
 
   <div>
-    <table class="table small soup" id="SOUP">
-
+    <table class="table small soup">
+      <tr>
+        <th>Title</th>
+        <th>Manufacturer</th>
+        <th>General description</th>
+        <th>Version</th>
+        <th>Release date</th>
+        <th>Purpose of the soup</th>
+        <th>Expected limit</th>
+        <th>Reasoning for use in medical device</th>
+        <th>Links with other Software libraries</th>
+      </tr>
+      #foreach ($soup in $content.annexes.SOUP.items)
+          <tr>
+            <td>$soup.title</td>
+            <td>$soup.manufacturer</td>
+            <td>$soup.general_description</td>
+            <td>$soup.version</td>
+            <td>$soup.release_date</td>
+            <td>$soup.purpose_of_the_soup</td>
+            <td>$soup.expected_limit</td>
+            <td>$soup.reasoning_for_use_in_medical_device</td>
+            <td>$soup.links_with_other_software_libraries</td>
+          </tr>
+      #end
     </table>
   </div>
+  <!--<table class="table small soup" id="SOUP">
+  </table>-->
 </div>
 
 </div>
@@ -651,9 +741,77 @@
   <br />
 
   <div>
-    <table class="table small risks" id="risks">
+    <table class="table small risks">
+      <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Error</th>
+        <th>Effect</th>
+        <th>Severity Rate</th>
+        <th>Cause</th>
+        <th>Occurence Rate</th>
+        <th>Detection Method</th>
+        <th>Detection Rate</th>
+        <th>RPN</th>
+        <th>Mitigation Method</th>
+        <th>Mitigation Detection Rate</th>
+        <th>Mitigation Occurence Rate</th>
+        <th>mRPN</th>
+        <th>Remarks</th>
+        <th>Specifications</th>
+      </tr>
+      #foreach($risk in $content.annexes.risks.items)
+      #set ($rpn_color = "")
+      #set ($rpn_bgcolor = "")
+      #set ($mrpn_color = "")
+      #set ($mrpn_bgcolor = "")
+      #set ($rpn = $risk.severity_rate * $risk.occurence_rate * $risk.detection_rate)
+      #set ($mrpn = $risk.severity_rate * $risk.mitigation_occurence_rate * $risk.mitigation_detection_rate)
 
+      #if( $rpn <= 150 )
+        #set($rpn_color = "#006000")
+        #set($rpn_bgcolor = "#C6EFCE")
+      #elseif( $rpn <= 400 )
+        #set($rpn_color = "#9B6400")
+        #set($rpn_bgcolor = "#FFEB9C")
+      #else
+        #set($rpn_color = "#9B0005")
+        #set($rpn_bgcolor = "#FFC6CD")
+      #end
+
+      #if( $mrpn <= 150 )
+        #set($mrpn_color = "#006000")
+        #set($mrpn_bgcolor = "#C6EFCE")
+      #elseif( $rpn <= 400 )
+        #set($mrpn_color = "#9B6400")
+        #set($mrpn_bgcolor = "#FFEB9C")
+      #else
+        #set($mrpn_color = "#9B0005")
+        #set($mrpn_bgcolor = "#FFC6CD")
+      #end
+      <tr>
+        <td>$risk.id</td>
+        <td>$risk.type</td>
+        <td>$risk.error</td>
+        <td>$risk.effect</td>
+        <td>$risk.severity_rate</td>
+        <td>$risk.cause</td>
+        <td>$risk.occurence_rate</td>
+        <td>$risk.detection_method</td>
+        <td>$risk.detection_rate</td>
+        <td style="color: $rpn_color; background-color: $rpn_bgcolor">$rpn</td>
+        <td>$risk.mitigation_method</td>
+        <td>$risk.mitigation_detection_rate</td>
+        <td>$risk.mitigation_occurence_rate</td>
+        <td style="color: $mrpn_color; background-color: $mrpn_bgcolor">$mrpn</td>
+        <td>$risk.remarks</td>
+        <td>$risk.specifications</td>
+      </tr>
+      #end
     </table>
+    <!--<table class="table small risks" id="risks">
+
+    </table>-->
   </div>
 </div>
 
@@ -699,9 +857,50 @@
   <br />
 
   <div>
-    <table class="table borderless small specifications" id="specifications">
+    <table class="table borderless small specifications">
+      <tr>
+        <th>Specification ID</th>
+        <th>User Need</th>
+        <th>Requirement</th>
+        <th>Specifications</th>
+        <th>Specification Description</th>
+      </tr>
+      #set($count = 1)
+      #set($countr = 1)
+      #foreach($spec in $content.annexes.specifications.items)
+        #if ($foreach.index > 0 )
 
+          #set($counting = $foreach.index - $count)
+          #if ($content.annexes.specifications.items.get($foreach.index).user_need == $content.annexes.specifications.items.get($counting).user_need)
+              #set($spec.user_need = "")
+              #set($count = $count + 1)
+          #else
+              #set($count = 1)
+
+          #end
+
+          #set($countings = $foreach.index - $countr)
+          #if ($content.annexes.specifications.items.get($foreach.index).requirement == $content.annexes.specifications.items.get($countings).requirement)
+              #set($spec.requirement = "")
+              #set($countr = $countr + 1)
+          #else
+              #set($countr = 1)
+
+          #end
+        #end
+      <tr>
+        <td>$spec.id</td>
+        <td>$spec.user_need</td>
+        <td>$spec.requirement</td>
+        <td>$spec.name</td>
+        <td>$spec.description</td>
+      </tr>
+      #end
     </table>
+
+    <!--<table class="table borderless small specifications" id="specifications">
+
+    </table>-->
   </div>
 </div>
 
@@ -750,6 +949,9 @@
     <table class="table borderless small tests" id="tests">
 
     </table>
+    <!--<table class="table borderless small tests" id="tests">
+
+    </table>-->
   </div>
 </div>
 
@@ -782,7 +984,7 @@
     table_effects += "<tr><td>" + effects[i].title + "</td>" + yes_no_effects + "</tr>";
   }
 
-    document.getElementById("changes").innerHTML = table_effects;
+    //document.getElementById("changes").innerHTML = table_effects;
 
   var table_available_info = "";
   var yes_no_available = "";
@@ -796,35 +998,35 @@
     table_available_info += "<tr><td>" + available_info[i].title +"</td>" + yes_no_available + "</tr>";
   }
 
-    document.getElementById("available").innerHTML = table_available_info;
+    //document.getElementById("available").innerHTML = table_available_info;
 
   var table_change_requests = "<tr><th>Key</th><th>Description</th><th>Status</th></tr>";
   for (var i=0; i<change_requests.length; i++) {
     table_change_requests += "<tr><td>" + change_requests[i].key +"</td><td>" + change_requests[i].description + "</td><td>" + change_requests[i].status + "</td></tr>";
   }
 
-  document.getElementById("change_requests").innerHTML = table_change_requests;
+  //document.getElementById("change_requests").innerHTML = table_change_requests;
 
   var table_unit_tests = "<tr><th>Key</th><th>Description</th><th>Status</th></tr>";
   for (var i=0; i<unit_tests.length; i++) {
     table_unit_tests += "<tr><td>" + unit_tests[i].key +"</td><td>" + unit_tests[i].description + "</td><td>" + unit_tests[i].status + "</td></tr>";
   }
 
-  document.getElementById("unit_tests").innerHTML = table_unit_tests;
+  //document.getElementById("unit_tests").innerHTML = table_unit_tests;
 
   var table_PAL = "<tr><th>Problem</th><th>Motivation Remark</th></tr>";
   for (var i=0; i<PAL.length; i++) {
     table_PAL += "<tr><td>" + PAL[i].problem +"</td><td>" + PAL[i].motivation_remark + "</td></tr>";
   }
 
-  document.getElementById("PAL").innerHTML = table_PAL;
+  //document.getElementById("PAL").innerHTML = table_PAL;
 
   var table_SOUP = "<tr><th>Title</th><th>Manufacturer</th><th>General description</th><th>Version</th><th>Release date</th><th>Purpose of the soup</th><th>Expected limit</th><th>Reasoning for use in medical device</th><th>Links with other Software libraries</th></tr>";
   for (var i=0; i<SOUP.length; i++) {
     table_SOUP += "<tr><td>" + SOUP[i].title +"</td><td>" + SOUP[i].manufacturer + "</td><td>" + SOUP[i].general_description + "</td><td>" + SOUP[i].version + "</td><td>" + SOUP[i].release_date + "</td><td>" + SOUP[i].purpose_of_the_soup + "</td><td>" + SOUP[i].expected_limit + "</td><td>" + SOUP[i].reasoning_for_use_in_medical_device + "</td><td>" + SOUP[i].links_with_other_software_libraries + "</td></tr>";
   }
 
-  document.getElementById("SOUP").innerHTML = table_SOUP;
+  //document.getElementById("SOUP").innerHTML = table_SOUP;
 
   var rpn = 0;
   var mrpn = 0;
@@ -867,7 +1069,7 @@
     table_risks += "<tr><td>" + risks[i].id +"</td><td>" + risks[i].type + "</td><td>" + risks[i].error + "</td><td>" + risks[i].effect + "</td><td>" + risks[i].severity_rate + "</td><td>" + risks[i].cause + "</td><td>" + risks[i].occurence_rate + "</td><td>" + risks[i].detection_method + "</td><td>" + risks[i].detection_rate + "</td><td style=\"background-color:" + rpn_bgcolor + ";color:" + rpn_color + "\">" + rpn + "</td><td>" + risks[i].mitigation_method + "</td><td>" + risks[i].mitigation_detection_rate + "</td><td>" + risks[i].mitigation_occurence_rate + "</td><td style=\"background-color:" + mrpn_bgcolor + ";color:" + mrpn_color + "\">" + mrpn + "</td><td>" + risks[i].remarks + "</td><td>" + risks[i].specifications + "</td></tr>";
   }
 
-  document.getElementById("risks").innerHTML = table_risks;
+  //document.getElementById("risks").innerHTML = table_risks;
 
   var count = 1;
   var counter = 1;
@@ -892,7 +1094,7 @@
     table_specifications += "<tr><td>" + specifications[i].id +"</td><td>" + specifications[i].user_need +"</td><td>" + specifications[i].requirement +"</td><td>" + specifications[i].name +"</td><td>" + specifications[i].description +"</td></tr>";
   }
 
-  document.getElementById("specifications").innerHTML = table_specifications;
+  //document.getElementById("specifications").innerHTML = table_specifications;
 
   var countr = 1;
   var result = [];
@@ -959,8 +1161,8 @@
 
   document.getElementById("tests").innerHTML = table_tests;
 
-  document.getElementById("quality_manager").src = content.software_version_checklist.signature.base64_signature;
-  document.getElementById("project_manager").src = content.release_form.signature.base64_signature;
+  //document.getElementById("quality_manager").src = content.software_version_checklist.signature.base64_signature;
+  //document.getElementById("project_manager").src = content.release_form.signature.base64_signature;
 
 </script>
 
